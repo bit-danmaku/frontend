@@ -19,7 +19,7 @@ const id = ref(route.params.channelID)
 const newPlayer = (channelID) => {
 
   if (isNumeric(channelID)) {
-    const host = document.location.hostname
+    const hostname = document.location.hostname
     const dp = new DPlayer({
       container: document.getElementById('dplayer'),
       video: {
