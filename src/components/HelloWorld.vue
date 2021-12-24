@@ -19,6 +19,7 @@ const id = ref(route.params.channelID)
 const newPlayer = (channelID) => {
 
   if (isNumeric(channelID)) {
+    const host = document.location.hostname
     const dp = new DPlayer({
       container: document.getElementById('dplayer'),
       video: {
@@ -26,7 +27,7 @@ const newPlayer = (channelID) => {
       },
       danmaku: {
         id: null,
-        api: `http://10.4.20.63:8008/channel/${channelID}/`,
+        api: `http://${hostname}:8008/channel/${channelID}/`,
       },
       /*apiBackend: {*/
       /*read: function (endpoint, callback) {*/
